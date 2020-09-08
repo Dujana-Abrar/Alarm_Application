@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonDatePicker = findViewById(R.id.buttonDatePick);
-        buttonTimePicker = findViewById(R.id.buttonTimePicker);
-        buttonSet = findViewById(R.id.buttonSet);
-        textViewDate = findViewById(R.id.textViewDate);
-        textViewTime = findViewById(R.id.textViewTime);
-
-        buttonDatePicker.setOnClickListener(this);
-        buttonTimePicker.setOnClickListener(this);
-        buttonSet.setOnClickListener(this);
+//        buttonDatePicker = findViewById(R.id.buttonDatePick);
+//        buttonTimePicker = findViewById(R.id.buttonTimePicker);
+//        buttonSet = findViewById(R.id.buttonSet);
+//        textViewDate = findViewById(R.id.textViewDate);
+//        textViewTime = findViewById(R.id.textViewTime);
+//
+//        buttonDatePicker.setOnClickListener(this);
+//        buttonTimePicker.setOnClickListener(this);
+//        buttonSet.setOnClickListener(this);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
