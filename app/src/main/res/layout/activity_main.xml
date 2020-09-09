@@ -42,10 +42,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/header"
-        android:orientation="vertical">
+        tools:layout_editor_absoluteX="24dp">
 
 
         <LinearLayout
@@ -56,13 +58,14 @@
 
             <TextView
                 android:id="@+id/medicineNameLabel"
-                android:labelFor="@id/editTextMedicineName"
                 style="@style/editText_label"
-                android:text="@string/medicine_name"/>
+                android:labelFor="@id/editTextMedicineName"
+                android:text="@string/medicine_name" />
+
             <EditText
                 android:id="@+id/editTextMedicineName"
-                android:layout_width="match_parent"
                 style="@style/editText_rounded"
+                android:layout_width="match_parent"
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
@@ -78,20 +81,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginRight="8dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/dosageValueLabel"
+                    style="@style/editText_label"
                     android:labelFor="@id/editTextDosageValue"
-                    android:text="@string/dosage"
-                    style="@style/editText_label" />
+                    android:text="@string/dosage" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextDosageValue"
-                    android:layout_width="match_parent"
                     style="@style/editText_rounded"
+                    android:layout_width="match_parent"
                     android:ems="10"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal"
@@ -101,20 +104,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="8dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/dosageUnitLabel"
+                    style="@style/editText_label"
                     android:labelFor="@id/editTextDosageValue"
-                    android:text="@string/unit"
-                    style="@style/editText_label"/>
+                    android:text="@string/unit" />
 
                 <EditText
                     android:id="@+id/editTextUnitValue"
-                    android:layout_width="match_parent"
                     style="@style/editText_rounded"
+                    android:layout_width="match_parent"
                     android:ems="10"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal"
@@ -131,21 +134,21 @@
 
             <TextView
                 android:id="@+id/timeLabel"
+                style="@style/editText_label"
                 android:labelFor="@id/editTextDosageValue"
-                android:text="@string/time"
-                style="@style/editText_label" />
+                android:text="@string/time" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginBottom="4dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/editTextTime"
-                    android:layout_width="120dp"
                     style="@style/editText_rounded"
+                    android:layout_width="120dp"
                     android:ems="10"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal"
@@ -156,15 +159,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginBottom="4dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
 
                 <EditText
                     android:id="@+id/editTextTime2"
-                    android:layout_width="120dp"
                     style="@style/editText_rounded"
+                    android:layout_width="120dp"
                     android:ems="10"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal"
@@ -173,4 +176,33 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Cancel"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Save"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.081" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
