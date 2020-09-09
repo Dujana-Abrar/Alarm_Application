@@ -2,42 +2,28 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="@color/colorPrimary"
+    style="@style/activity_container"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="16dp"
-        android:paddingBottom="40dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        style="@style/header_layout"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="@string/new_alarm"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp" />
+            style="@style/header_title"
+            android:text="@string/new_alarm" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00000000"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/ic_home"
-            tools:ignore="VectorDrawableCompat"
-            android:contentDescription="@string/go_to_home" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#00000000"-->
+<!--            android:layout_weight="0"-->
+<!--            app:srcCompat="@drawable/ic_home"-->
+<!--            tools:ignore="VectorDrawableCompat"-->
+<!--            android:contentDescription="@string/go_to_home" />-->
 
     </LinearLayout>
 
@@ -49,9 +35,7 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            style="@style/input_row"
             android:orientation="vertical">
 
             <TextView
@@ -59,10 +43,11 @@
                 android:labelFor="@id/editTextMedicineName"
                 style="@style/editText_label"
                 android:text="@string/medicine_name"/>
+
             <EditText
                 android:id="@+id/editTextMedicineName"
-                android:layout_width="match_parent"
                 style="@style/editText_rounded"
+                android:layout_width="match_parent"
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
@@ -70,15 +55,15 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
+            style="@style/input_row"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:orientation="vertical">
 
@@ -102,19 +87,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginLeft="8dp"
                 android:orientation="vertical">
-
                 <TextView
                     android:id="@+id/dosageUnitLabel"
+                    style="@style/editText_label"
                     android:labelFor="@id/editTextDosageValue"
-                    android:text="@string/unit"
-                    style="@style/editText_label"/>
-
+                    android:text="@string/unit" />
                 <EditText
                     android:id="@+id/editTextUnitValue"
-                    android:layout_width="match_parent"
                     style="@style/editText_rounded"
+                    android:layout_width="match_parent"
                     android:ems="10"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal"
@@ -124,10 +106,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
-            android:orientation="vertical">
+            style="@style/input_row">
 
             <TextView
                 android:id="@+id/timeLabel"
@@ -173,4 +152,29 @@
 
         </LinearLayout>
     </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/cancel_button"-->
+<!--            style="@style/btn_primary"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="#00000000"-->
+<!--            android:shadowDx="0"-->
+<!--            android:shadowDy="0"-->
+<!--            android:text="@string/cancel"-->
+<!--            android:textColor="@color/colorLight" />-->
+
+        <Button
+            android:id="@+id/save_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            style="@style/btn_primary"
+            android:text="@string/save" />
+<!--    </LinearLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

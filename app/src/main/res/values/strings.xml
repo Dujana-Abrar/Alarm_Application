@@ -6,4 +6,6 @@
     <string name="dosage">Dosage</string>
     <string name="unit">Unit</string>
     <string name="time">Time</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>
