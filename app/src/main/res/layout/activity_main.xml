@@ -2,181 +2,202 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/activity_container"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/header"
-        style="@style/header_layout"
-        tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/textView"
-            style="@style/header_title"
-            android:text="@string/new_alarm" />
-
-<!--        <ImageButton-->
-<!--            android:id="@+id/imageButton"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="#00000000"-->
-<!--            android:layout_weight="0"-->
-<!--            app:srcCompat="@drawable/ic_home"-->
-<!--            tools:ignore="VectorDrawableCompat"-->
-<!--            android:contentDescription="@string/go_to_home" />-->
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        tools:layout_editor_absoluteX="24dp">
-
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            style="@style/input_row"
+            style="@style/activity_container"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/medicineNameLabel"
-                style="@style/editText_label"
-                android:labelFor="@id/editTextMedicineName"
-                android:text="@string/medicine_name" />
-
-            <EditText
-                android:id="@+id/editTextMedicineName"
-                style="@style/editText_rounded"
-                android:layout_width="match_parent"
-                android:ems="10"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName"
-                tools:ignore="LabelFor" />
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/input_row"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:id="@+id/header"
+                style="@style/header_layout"
+                tools:ignore="MissingConstraints">
 
                 <TextView
-                    android:id="@+id/dosageValueLabel"
-                    style="@style/editText_label"
-                    android:labelFor="@id/editTextDosageValue"
-                    android:text="@string/dosage" />
+                    android:id="@+id/textView"
+                    style="@style/header_title"
+                    android:text="@string/new_alarm" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDosageValue"
-                    style="@style/editText_rounded"
-                    android:layout_width="match_parent"
-                    android:ems="10"
-                    android:importantForAutofill="no"
-                    android:inputType="numberDecimal"
-                    tools:ignore="LabelFor" />
+                <!--        <ImageButton-->
+                <!--            android:id="@+id/imageButton"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:background="#00000000"-->
+                <!--            android:layout_weight="0"-->
+                <!--            app:srcCompat="@drawable/ic_home"-->
+                <!--            tools:ignore="VectorDrawableCompat"-->
+                <!--            android:contentDescription="@string/go_to_home" />-->
+
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                tools:layout_editor_absoluteX="24dp">
+
+
+                <LinearLayout
+                    style="@style/input_row"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/medicineNameLabel"
+                        style="@style/editText_label"
+                        android:labelFor="@id/editTextMedicineName"
+                        android:text="@string/medicine_name" />
+
+                    <EditText
+                        android:id="@+id/editTextMedicineName"
+                        style="@style/editText_rounded"
+                        android:layout_width="match_parent"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/input_row"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dosageValueLabel"
+                            style="@style/editText_label"
+                            android:labelFor="@id/editTextDosageValue"
+                            android:text="@string/dosage" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextDosageValue"
+                            style="@style/editText_rounded"
+                            android:layout_width="match_parent"
+                            android:ems="10"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dosageUnitLabel"
+                            style="@style/editText_label"
+                            android:labelFor="@id/editTextDosageValue"
+                            android:text="@string/unit" />
+
+                        <EditText
+                            android:id="@+id/editTextUnitValue"
+                            style="@style/editText_rounded"
+                            android:layout_width="match_parent"
+                            android:ems="10"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/input_row">
+
+                    <TextView
+                        android:id="@+id/timeLabel"
+                        style="@style/editText_label"
+                        android:labelFor="@id/editTextDosageValue"
+                        android:text="@string/time" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTime"
+                            style="@style/editText_rounded"
+                            android:layout_width="120dp"
+                            android:ems="10"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            tools:ignore="LabelFor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <EditText
+                            android:id="@+id/editTextTime2"
+                            style="@style/editText_rounded"
+                            android:layout_width="120dp"
+                            android:ems="10"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal"
+                            tools:ignore="LabelFor" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="172dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/dosageUnitLabel"
-                    style="@style/editText_label"
-                    android:labelFor="@id/editTextDosageValue"
-                    android:text="@string/unit" />
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
 
-                <EditText
-                    android:id="@+id/editTextUnitValue"
-                    style="@style/editText_rounded"
-                    android:layout_width="match_parent"
-                    android:ems="10"
-                    android:importantForAutofill="no"
-                    android:inputType="numberDecimal"
-                    tools:ignore="LabelFor" />
+                <Button
+                    android:id="@+id/cancel_button"
+                    style="@style/btn_half"
+                    android:backgroundTint="#00000000"
+                    android:stateListAnimator="@null"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colorLight"
+                    tools:ignore="UnusedAttribute" />
+
+                <Button
+                    android:id="@+id/save_button"
+                    style="@style/btn_half"
+                    android:backgroundTint="@color/colorAccent"
+                    android:stateListAnimator="@null"
+                    android:text="@string/save"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            style="@style/input_row">
-
-            <TextView
-                android:id="@+id/timeLabel"
-                style="@style/editText_label"
-                android:labelFor="@id/editTextDosageValue"
-                android:text="@string/time" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/editTextTime"
-                    style="@style/editText_rounded"
-                    android:layout_width="120dp"
-                    android:ems="10"
-                    android:importantForAutofill="no"
-                    android:inputType="numberDecimal"
-                    tools:ignore="LabelFor" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-
-                <EditText
-                    android:id="@+id/editTextTime2"
-                    style="@style/editText_rounded"
-                    android:layout_width="120dp"
-                    android:ems="10"
-                    android:importantForAutofill="no"
-                    android:inputType="numberDecimal"
-                    tools:ignore="LabelFor" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <Button
-            android:id="@+id/cancel_button"
-            style="@style/btn_half"
-            android:backgroundTint="#00000000"
-            android:stateListAnimator="@null"
-            android:text="@string/cancel"
-            android:textColor="@color/colorLight"
-            tools:ignore="UnusedAttribute" />
-        <Button
-            android:id="@+id/save_button"
-            style="@style/btn_half"
-            android:backgroundTint="@color/colorAccent"
-            android:stateListAnimator="@null"
-            android:textColor="@android:color/white"
-            android:text="@string/save" />
-    </LinearLayout>
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
