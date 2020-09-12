@@ -2,27 +2,24 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width = "match_parent"
-    android:layout_height = "match_parent"
+    style="@style/activity_container"
     tools:context=".MainActivity">
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/white"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            style="@style/activity_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/header"
-                style="@style/header_layout"
-                tools:ignore="MissingConstraints">
+                style="@style/header_layout">
 
                 <TextView
                     android:id="@+id/textView"
@@ -45,21 +42,17 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/header"
-                tools:layout_editor_absoluteX="24dp">
+                android:orientation="vertical">
 
 
                 <LinearLayout
                     style="@style/input_row"
                     android:orientation="vertical">
-
                     <TextView
                         android:id="@+id/medicineNameLabel"
                         style="@style/editText_label"
                         android:labelFor="@id/editTextMedicineName"
                         android:text="@string/medicine_name" />
-
                     <EditText
                         android:id="@+id/editTextMedicineName"
                         style="@style/editText_rounded"
@@ -82,14 +75,12 @@
                         android:layout_marginRight="8dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <TextView
                             android:id="@+id/dosageValueLabel"
                             style="@style/editText_label"
                             android:labelFor="@id/editTextDosageValue"
                             android:text="@string/dosage" />
-
-                        <com.google.android.material.textfield.TextInputEditText
+                        <EditText
                             android:id="@+id/editTextDosageValue"
                             style="@style/editText_rounded"
                             android:layout_width="match_parent"
@@ -104,13 +95,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <TextView
                             android:id="@+id/dosageUnitLabel"
                             style="@style/editText_label"
                             android:labelFor="@id/editTextDosageValue"
                             android:text="@string/unit" />
-
                         <EditText
                             android:id="@+id/editTextUnitValue"
                             style="@style/editText_rounded"
@@ -124,80 +113,41 @@
                 </LinearLayout>
 
                 <LinearLayout style="@style/input_row">
-
                     <TextView
                         android:id="@+id/timeLabel"
                         style="@style/editText_label"
-                        android:labelFor="@id/editTextDosageValue"
                         android:text="@string/time" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/editTextTime"
-                            style="@style/editText_rounded"
-                            android:layout_width="120dp"
-                            android:ems="10"
-                            android:importantForAutofill="no"
-                            android:inputType="numberDecimal"
-                            tools:ignore="LabelFor" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
-                        <EditText
-                            android:id="@+id/editTextTime2"
-                            style="@style/editText_rounded"
-                            android:layout_width="120dp"
-                            android:ems="10"
-                            android:importantForAutofill="no"
-                            android:inputType="numberDecimal"
-                            tools:ignore="LabelFor" />
-                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="172dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent">
-
-                <Button
-                    android:id="@+id/cancel_button"
-                    style="@style/btn_half"
-                    android:backgroundTint="#00000000"
-                    android:stateListAnimator="@null"
-                    android:text="@string/cancel"
-                    android:textColor="@color/colorLight"
-                    tools:ignore="UnusedAttribute" />
-
-                <Button
-                    android:id="@+id/save_button"
-                    style="@style/btn_half"
-                    android:backgroundTint="@color/colorAccent"
-                    android:stateListAnimator="@null"
-                    android:text="@string/save"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
-
+<!--            <Space-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="236dp"-->
+<!--                />-->
         </LinearLayout>
     </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/btn_half"
+            android:layout_weight="4"
+            android:backgroundTint="#00000000"
+            android:text="@string/cancel"
+            android:textColor="@color/colorLight"
+            tools:ignore="UnusedAttribute" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/btn_half"
+            android:layout_weight="5"
+            android:text="@string/save"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

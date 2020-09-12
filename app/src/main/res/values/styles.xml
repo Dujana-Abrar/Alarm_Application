@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
@@ -9,7 +9,8 @@
     <style name="activity_container">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:padding">24dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
         <item name="android:background">@android:color/white</item>
     </style>
 
@@ -17,7 +18,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingTop">32dp</item>
         <item name="android:paddingBottom">32dp</item>
     </style>
     <style name="header_title">
@@ -25,7 +26,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">24sp</item>
-        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
         <item name="android:textColor">@color/colorDark</item>
     </style>
 
@@ -39,7 +40,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textColor">@color/colorLight</item>
-        <item name="fontFamily">@font/poppins</item>
+        <item name="android:fontFamily">@font/poppins</item>
         <item name="android:textSize">10sp</item>
         <item name="android:layout_marginBottom">2dp</item>
     </style>
@@ -56,12 +57,12 @@
     <style name="btn_half">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_weight">1</item>
         <item name="android:textAllCaps">false</item>
-        <item name="fontFamily">@font/poppins_bold</item>
-        <item name="android:textSize">12sp</item>
-        <item name="cornerRadius">16dp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+        <item name="elevation">0dp</item>
         <item name="android:padding">14dp</item>
-        <item name="android:elevation">0dp</item>
     </style>
 </resources>
