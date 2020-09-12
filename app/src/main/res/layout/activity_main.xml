@@ -9,11 +9,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             style="@style/activity_container"
@@ -123,81 +125,38 @@
 
                 </LinearLayout>
 
-                <LinearLayout style="@style/input_row">
-
-                    <TextView
-                        android:id="@+id/timeLabel"
-                        style="@style/editText_label"
-                        android:labelFor="@id/editTextDosageValue"
-                        android:text="@string/time" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/editTextTime"
-                            style="@style/editText_rounded"
-                            android:layout_width="120dp"
-                            android:ems="10"
-                            android:importantForAutofill="no"
-                            android:inputType="numberDecimal"
-                            tools:ignore="LabelFor" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
-                        <EditText
-                            android:id="@+id/editTextTime2"
-                            style="@style/editText_rounded"
-                            android:layout_width="120dp"
-                            android:ems="10"
-                            android:importantForAutofill="no"
-                            android:inputType="numberDecimal"
-                            tools:ignore="LabelFor" />
-                    </LinearLayout>
-
-                </LinearLayout>
             </LinearLayout>
 
-            <Space
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
                 android:layout_width="match_parent"
-                android:layout_height="172dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent">
-
-                <Button
-                    android:id="@+id/cancel_button"
-                    style="@style/btn_half"
-                    android:backgroundTint="#00000000"
-                    android:stateListAnimator="@null"
-                    android:text="@string/cancel"
-                    android:textColor="@color/colorLight"
-                    tools:ignore="UnusedAttribute" />
-
-                <Button
-                    android:id="@+id/save_button"
-                    style="@style/btn_half"
-                    android:backgroundTint="@color/colorAccent"
-                    android:stateListAnimator="@null"
-                    android:text="@string/save"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="24dp">
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/btn_half"
+            android:backgroundTint="#00000000"
+            android:stateListAnimator="@null"
+            android:text="@string/cancel"
+            android:textColor="@color/colorLight"
+            tools:ignore="UnusedAttribute" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/btn_half"
+            android:backgroundTint="@color/colorAccent"
+            android:stateListAnimator="@null"
+            android:text="@string/save"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
