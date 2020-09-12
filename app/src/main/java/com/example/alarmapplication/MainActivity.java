@@ -2,6 +2,8 @@ package com.example.alarmapplication;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
@@ -17,6 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -32,12 +35,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private int year, month, day, hour, minute;
     private int alarmYear, alarmMonth, alarmDay, alarmHour, alarmMinute;
+    private int n = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        ArrayList<Integer> alarms = new ArrayList<>();
+
+        for (int i = 1; i <= 10; i++)
+        {
+            alarms.add(i);
+        }
+
+
+        RecyclerView recyclerView = findViewById(R.id.recycler);
+        recyclerView.setAdapter(new AlarmAdapter(alarms));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        buttonDatePicker = findViewById(R.id.buttonDatePick);
 //        buttonTimePicker = findViewById(R.id.buttonTimePicker);
 //        buttonSet = findViewById(R.id.buttonSet);

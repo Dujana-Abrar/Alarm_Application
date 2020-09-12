@@ -112,26 +112,22 @@
 
                 </LinearLayout>
 
-                <LinearLayout style="@style/input_row">
-                    <TextView
-                        android:id="@+id/timeLabel"
-                        style="@style/editText_label"
-                        android:text="@string/time" />
-
-                </LinearLayout>
             </LinearLayout>
 
-<!--            <Space-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="236dp"-->
-<!--                />-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="horizontal">
+        tools:layout_editor_absoluteX="24dp">
 
         <Button
             android:id="@+id/cancel_button"
