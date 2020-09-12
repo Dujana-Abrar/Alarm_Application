@@ -13,9 +13,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            style="@style/linear_container">
 
             <LinearLayout
                 android:id="@+id/header"
@@ -40,9 +38,7 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                style="@style/linear_container">
 
 
                 <LinearLayout
@@ -114,20 +110,54 @@
 
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+            <LinearLayout
+                android:background="@drawable/rounded_container"
+                style="@style/linear_container">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="8dp"
+                    style="@style/linear_container">
+                    <TextView
+                        android:text="Time"
+                        android:layout_weight="5"
+                        android:textColor="@android:color/white"
+                        style="@style/editText_label"/>
+                    <TextView
+                        android:text="Dosage"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/white"
+                        style="@style/editText_label"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    style="@style/linear_container"
+                    android:layout_height="200dp"
+                    />
+                <LinearLayout
+                    android:padding="8dp"
+                    style="@style/linear_container">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+ Add"
+                        android:backgroundTint="@android:color/white"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginLeft="8dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/linear_container"
+        android:background="@android:color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="24dp">
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/cancel_button"

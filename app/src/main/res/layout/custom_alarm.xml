@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/timeCard"
+    android:background="@color/slightDark"
+    android:orientation="vertical"
+    android:padding="16dp"
+    style="@style/linear_container"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:background="@color/slightDark"
+        android:orientation="horizontal"
+        style="@style/linear_container">
+        <TextView
+            android:text="09:00"
+            android:paddingRight="4dp"
+            style="@style/timeText"/>
+        <TextView
+            android:text="AM"
+            android:layout_gravity="start"
+            android:paddingTop="6dp"
+            style="@style/meridianText"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:backgroundTint="#470B0B"
-        app:iconTint="#2B0404"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/dosageValue"
+            style="@style/timeText"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingRight="16dp"
+            android:text="2"
+            />
+        <TextView
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            style="@style/timeText"
+            android:text="X"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/slightDark"
+        android:orientation="horizontal"
+        style="@style/linear_container">
+        <TextView
+            android:text="S"
+            style="@style/dayText"/>
+        <TextView
+            android:text="M"
+            style="@style/dayText"/>
+        <TextView
+            android:text="T"
+            style="@style/dayText"/>
+        <TextView
+            android:text="W"
+            style="@style/dayText"/>
+        <TextView
+            android:text="T"
+            style="@style/dayText"/>
+        <TextView
+            android:text="F"
+            style="@style/dayText"/>
+        <TextView
+            android:text="S"
+            style="@style/dayText"/>
+    </LinearLayout>
+</LinearLayout>
+

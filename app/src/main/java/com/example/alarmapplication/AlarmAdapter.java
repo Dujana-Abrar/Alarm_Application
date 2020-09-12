@@ -4,6 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,7 +29,7 @@ public class AlarmAdapter extends RecyclerView.Adapter<AlarmAdapter.AlarmViewHol
 
     @Override
     public void onBindViewHolder(@NonNull AlarmViewHolder holder, int position) {
-        holder.button.setText(""+alarmData.get(position));
+        ((TextView) holder.linearLayout.findViewById(R.id.dosageValue)).setText("" + alarmData.get(position));
     }
 
     @Override
@@ -37,10 +39,10 @@ public class AlarmAdapter extends RecyclerView.Adapter<AlarmAdapter.AlarmViewHol
 
     public class AlarmViewHolder extends RecyclerView.ViewHolder
     {
-        Button button;
+        LinearLayout linearLayout;
         public AlarmViewHolder(@NonNull View itemView) {
             super(itemView);
-            button = itemView.findViewById(R.id.button);
+            linearLayout = itemView.findViewById(R.id.timeCard);
         }
     }
 }

@@ -42,18 +42,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         ArrayList<Integer> alarms = new ArrayList<>();
 
-        for (int i = 1; i <= 10; i++)
-        {
+        for (int i = 1; i <= 10; i++) {
             alarms.add(i);
         }
-
 
         RecyclerView recyclerView = findViewById(R.id.recycler);
         recyclerView.setAdapter(new AlarmAdapter(alarms));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 //        buttonDatePicker = findViewById(R.id.buttonDatePick);
 //        buttonTimePicker = findViewById(R.id.buttonTimePicker);
 //        buttonSet = findViewById(R.id.buttonSet);
